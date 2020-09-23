@@ -20,9 +20,8 @@ def valid_move(data):
         return False
     if data['currentBoard'][data['move']] is not None:
         return False
-   
-   return True
 
+   return True
 
 def convert_to_i_j(move):
     return int(move / 19), move % 19
@@ -34,7 +33,7 @@ def calculateWinner(board, move):
 
     iReset = i
     jReset = j
-    #left & right
+    # left & right
     count = 0
     curr = squares[i][j]
     # left
@@ -59,7 +58,7 @@ def calculateWinner(board, move):
         else:
             break
 
-    #up & down
+    # up & down
     j = jReset
     count = 0
     # up
