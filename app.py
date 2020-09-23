@@ -15,10 +15,13 @@ rooms = {}
 
 
 def valid_move(data):
-    if data['currentBoard'][data['move']] is None:
-        return True
-    else:
+    i, j = convert_to_i_j(data['move'])
+    if (i < 0 or i >= 19 or j < 0 or j >= 19):
         return False
+    if data['currentBoard'][data['move']] is not None:
+        return False
+   
+   return True
 
 
 def convert_to_i_j(move):
